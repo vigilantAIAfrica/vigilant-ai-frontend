@@ -1,4 +1,4 @@
-Get-ChildItem -Directory | ForEach-Object { 
+`Get-ChildItem -Directory | ForEach-Object { 
     Write-Host "Updating Repository: $($_.Name)" -ForegroundColor Cyan
     cd $_.FullName
     if (Test-Path .git) {
@@ -10,3 +10,4 @@ Get-ChildItem -Directory | ForEach-Object {
     }
     cd ..
 }
+`
